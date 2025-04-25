@@ -15,11 +15,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className="bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
-        <Header />
-        <main className="min-h-screen px-6 py-10">{children}</main>
-        <Footer />
-      </body>
+    <body
+  className="min-h-screen bg-no-repeat bg-center bg-cover bg-fixed text-[var(--foreground)] transition-colors duration-300"
+  style={{ backgroundImage: "url('/bg-city.png')" }}
+>
+  <div className="backdrop-blur-sm bg-black/60 min-h-screen">
+    <Header />
+    <main className="px-6 py-10">{children}</main>
+    <Footer />
+  </div>
+</body>
     </html>
   );
 }
