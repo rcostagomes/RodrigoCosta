@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export default function Contato() {
   return (
@@ -12,13 +13,46 @@ export default function Contato() {
       transition={{ duration: 0.7 }}
     >
       <h2 className="text-3xl font-bold mb-6">Entre em contato</h2>
-      <p className="text-gray-400 mb-6">Me envie uma mensagem ou conecte-se comigo nas redes sociais.</p>
-      <a
-        href="mailto:costardgg@gmail.com"
-        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-      >
-        Enviar Email
-      </a>
+      <p className="text-gray-400 mb-12">Me envie uma mensagem ou conecte-se comigo nas redes sociais.</p>
+
+      <div className="flex justify-center gap-6">
+        {/* GitHub */}
+        <motion.a
+          href="https://github.com/rcostagomes"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center gap-2 bg-gray-800 text-white px-5 py-3 rounded-lg hover:bg-gray-700 transition"
+        >
+          <FaGithub className="text-2xl" />
+          GitHub
+        </motion.a>
+
+        {/* LinkedIn */}
+        <motion.a
+          href="https://www.linkedin.com/in/rodrigo-costa-645893244/"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center gap-2 bg-blue-700 text-white px-5 py-3 rounded-lg hover:bg-blue-600 transition"
+        >
+          <FaLinkedin className="text-2xl" />
+          LinkedIn
+        </motion.a>
+
+        {/* Email */}
+        <motion.a
+          href="mailto:costardgg@gmail.com"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center gap-2 bg-green-600 text-white px-5 py-3 rounded-lg hover:bg-green-500 transition"
+        >
+          <FaEnvelope className="text-2xl" />
+          Email
+        </motion.a>
+      </div>
     </motion.section>
   );
 }
