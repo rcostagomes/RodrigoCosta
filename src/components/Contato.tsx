@@ -13,9 +13,11 @@ export default function Contato() {
       transition={{ duration: 0.7 }}
     >
       <h2 className="text-3xl font-bold mb-6">Entre em contato</h2>
-      <p className="text-gray-400 mb-12">Me envie uma mensagem ou conecte-se comigo nas redes sociais.</p>
+      <p className="text-gray-400 mb-12">
+        Me envie uma mensagem ou conecte-se comigo nas redes sociais.
+      </p>
 
-      <div className="flex justify-center gap-6">
+      <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
         {/* GitHub */}
         <motion.a
           href="https://github.com/rcostagomes"
@@ -23,7 +25,7 @@ export default function Contato() {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 bg-gray-800 text-white px-5 py-3 rounded-lg hover:bg-gray-700 transition"
+          className="flex items-center justify-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition w-full sm:w-auto"
         >
           <FaGithub className="text-2xl" />
           GitHub
@@ -36,7 +38,7 @@ export default function Contato() {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 bg-blue-700 text-white px-5 py-3 rounded-lg hover:bg-blue-600 transition"
+          className="flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition w-full sm:w-auto"
         >
           <FaLinkedin className="text-2xl" />
           LinkedIn
@@ -47,7 +49,7 @@ export default function Contato() {
           href="mailto:costardgg@gmail.com"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 bg-green-600 text-white px-5 py-3 rounded-lg hover:bg-green-500 transition"
+          className="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition w-full sm:w-auto"
         >
           <FaEnvelope className="text-2xl" />
           Email
