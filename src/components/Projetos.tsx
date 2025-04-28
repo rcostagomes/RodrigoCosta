@@ -1,10 +1,28 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const projetos = [
-  { nome: 'projeto 1', tech: 'descrição' },
-  { nome: 'projeto 2', tech: 'descrição' },
-  { nome: 'projeto 3', tech: 'descrição' },
+ 
+  {
+    nome: 'InkByte (Em produção)',
+    imagem: '',
+    link: '#',
+    descricao: 'InkByte é um marketplace voltado para dropshipping de produtos gráficos, com integração via API para importação de produtos e gerenciamento completo de pedidos. A plataforma inclui chat interno entre usuários e vendedores, além de uma área administrativa para validação de cadastros e confirmação de pedidos. Futuramente, contará também com sistema de pagamento integrado para facilitar as transações.',
+  },  
+  {
+    nome: 'BuyGames',
+    imagem: '/buygames.png',
+    link: 'https://buygames.com.br',
+    descricao: 'Rede social focada em games, com postagens, curtidas, compartilhamentos, stories e chat em tempo real.'
+  },
+  {
+    nome: 'BuyFarma',
+    imagem: '/buyfarma.png',
+    link: 'https://buyfarma.com.br', 
+    descricao: 'BuyFarma é uma landing page desenvolvida para apresentar um futuro aplicativo de farmácia, focado em facilitar o acesso a medicamentos e produtos de saúde.',
+  },
+  
 ];
 
 export default function Projetos() {
@@ -20,19 +38,31 @@ export default function Projetos() {
         Projetos Recentes
       </motion.h2>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-8">
         {projetos.map((proj, idx) => (
           <motion.div
             key={proj.nome}
-            className="bg-zinc-800 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+            className="bg-zinc-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.2, duration: 0.6 }}
-            whileHover={{ scale: 1.03 }}
           >
-            <h3 className="text-xl font-semibold mb-2">{proj.nome}</h3>
-            <p className="text-sm text-gray-300">{proj.tech}</p>
+            <a href={proj.link} target="_blank" rel="noopener noreferrer">
+              <div className="relative w-full h-48">
+                <Image
+                  src={proj.imagem}
+                  alt={`Imagem do projeto ${proj.nome}`}
+                  layout="fill"
+                  objectFit="cover"
+                  className="hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 text-left">
+                <h3 className="text-xl font-semibold mb-2">{proj.nome}</h3>
+                <p className="text-sm text-gray-300">{proj.descricao}</p>
+              </div>
+            </a>
           </motion.div>
         ))}
       </div>
