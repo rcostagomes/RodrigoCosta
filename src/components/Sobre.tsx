@@ -5,14 +5,15 @@ export default function Sobre() {
   return (
     <motion.section
       id="sobre"
-      className="max-w-4xl mx-auto py-24 px-4 text-center"
+      className="max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="text-3xl font-bold mb-6">Sobre Mim</h2>
-      <p className="text-gray-400 text-lg leading-relaxed text-justify">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-8">Sobre Mim</h2>
+
+      <p className="text-gray-400 text-base sm:text-lg leading-relaxed text-left sm:text-justify">
         Minha jornada na tecnologia começou através de um bootcamp intensivo da Driven, onde mergulhei em projetos práticos e desenvolvi habilidades sólidas em front-end, back-end, bancos de dados, testes e práticas DevOps. 
         Essa formação me preparou para enfrentar os desafios do mercado de trabalho com uma visão completa sobre o ciclo de desenvolvimento de software.
         <br /><br />

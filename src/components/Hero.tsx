@@ -10,7 +10,9 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-3xl sm:text-5xl font-bold mb-6 leading-tight text-white"
       >
-        Olá, eu sou <span className="text-blue-500">Rodrigo Costa</span>,<br className="hidden sm:block" />
+        Olá, eu sou{' '}
+        <span className="text-blue-500 whitespace-nowrap">Rodrigo Costa</span>
+        {', '}
         25 anos, de São Gonçalo - RJ.
       </motion.h1>
 
