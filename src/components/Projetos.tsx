@@ -14,7 +14,7 @@ const projetos = [
     nome: 'BuyGames',
     imagem: '/buygames.png',
     link: 'https://buygames.com.br',
-    descricao: 'Rede social focada em games, com postagens, curtidas, compartilhamentos, stories e chat em tempo real.'
+    descricao: 'BuyGames é uma rede social para gamers, com postagens, curtidas, compartilhamentos, stories e chat em tempo real, focada em interações para os amantes de games.'
   },
   {
     nome: 'BuyFarma',
