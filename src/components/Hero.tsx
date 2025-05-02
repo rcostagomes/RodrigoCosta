@@ -26,12 +26,12 @@ export default function Hero() {
       </motion.p>
 
       <motion.a
-        href="/Rodrigo_Gomes_Costa.pdf"
-        download
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
-      >
+  href="/Rodrigo_Gomes_Costa.pdf"
+  download="Rodrigo_Gomes_Costa.pdf"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
+>
         Baixar Currículo
       </motion.a>
     </section>
