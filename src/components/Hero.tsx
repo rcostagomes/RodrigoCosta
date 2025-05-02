@@ -26,7 +26,7 @@ export default function Hero() {
       </motion.p>
 
       <motion.a
-        href= "../assets/curriculo.pdf"
+        href= "../../public/Rodrigo_Gomes_Costa.pdf"
         download
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
